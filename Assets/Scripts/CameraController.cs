@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    //　プレイヤーたちを格納
     [SerializeField]
+    private List<Transform> _targets = new List<Transform>();
+    // カメラが追うプレイヤー
     private Transform _target;
+    //　現在何番のプレイヤーを追っているか
+    private int _nowPlayer;
+
+    private void Start()
+    {
+        _target = _targets[0];
+        _nowPlayer = 0;
+    }
 
     // Update is called once per frame
     void Update()
@@ -15,6 +26,12 @@ public class CameraController : MonoBehaviour
             // ターゲットオブジェクトの位置を追従
             transform.position = new Vector3(_target.position.x, _target.position.y, transform.position.z);
             // 任意の回転処理を追加する場合は以下に記述
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            _nowPlayer++;
+            _target = _targets[_nowPlayer];
         }
     }
 }
