@@ -31,7 +31,30 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             _nowPlayer++;
+
+            if (_nowPlayer > _targets.Count - 1)
+            {
+                _nowPlayer = 0;
+            }
+
             _target = _targets[_nowPlayer];
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            _nowPlayer--;
+
+            if (_nowPlayer < 0)
+            {
+                _nowPlayer = _targets.Count - 1;
+            }
+
+            _target = _targets[_nowPlayer];
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            
         }
     }
 }

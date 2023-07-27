@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaunchBall : MonoBehaviour
 {
     //@‘Å‚¿ã‚°‚Ì‹­‚³
-    private float _launchForce = 200f;
+    private float _launchForce = 250f;
     //@‘Å‚¿ã‚°‚Ì‰¹
     [SerializeField]
     private AudioClip _launchSound;
