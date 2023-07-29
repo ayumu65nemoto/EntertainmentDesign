@@ -38,6 +38,12 @@ public class RotateTitle : MonoBehaviour
                 _rotationCount++;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.rotation = Quaternion.identity;
+            isRotation = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
