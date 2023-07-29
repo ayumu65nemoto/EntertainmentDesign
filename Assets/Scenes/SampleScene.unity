@@ -807,11 +807,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 258134234419788095, guid: 86b6596b33c31044da6d5f037701088e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 208
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 258134234419788095, guid: 86b6596b33c31044da6d5f037701088e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45
+      value: 171.2
       objectReference: {fileID: 0}
     - target: {fileID: 258134234419788095, guid: 86b6596b33c31044da6d5f037701088e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6285,6 +6285,7 @@ GameObject:
   - component: {fileID: 380980542}
   - component: {fileID: 380980541}
   - component: {fileID: 380980543}
+  - component: {fileID: 380980544}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -6353,7 +6354,7 @@ Transform:
   m_GameObject: {fileID: 380980540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50, y: 202, z: 0}
-  m_LocalScale: {x: 100, y: 20, z: 1}
+  m_LocalScale: {x: 80, y: 20, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 840919910}
@@ -6386,6 +6387,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &380980544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380980540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cf4ab2cb39ac2498fdbf88dbe09a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSound: {fileID: 8300000, guid: a9fb76f52754a6d40b596decb94a0ef3, type: 3}
+  _audioSource: {fileID: 883554392}
+  _cameraController: {fileID: 519420033}
 --- !u!1 &424251233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6938,7 +6954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451757835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.3, y: 168.9, z: 0}
+  m_LocalPosition: {x: 10.1, y: 168.9, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7166,7 +7182,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465140442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7595,7 +7611,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7644,6 +7660,7 @@ MonoBehaviour:
   - {fileID: 694992096}
   - {fileID: 163523986}
   - {fileID: 948062252}
+  - {fileID: 380980542}
 --- !u!1 &535049368
 GameObject:
   m_ObjectHideFlags: 0
@@ -9108,7 +9125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723386933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.3, y: 130, z: 0}
+  m_LocalPosition: {x: 10.01, y: 130, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9390,7 +9407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rotateObject: {fileID: 451010519}
   _targetObject: {fileID: 426277925}
-  _rotateAxis: {x: 0, y: 0, z: 1}
+  _rotateAxis: {x: 0, y: 0, z: -1}
   _openSound: {fileID: 8300000, guid: 90afeced25c686547b9dbcdb2c15d3fb, type: 3}
   _audioSource: {fileID: 883554392}
 --- !u!61 &771112202
@@ -10323,7 +10340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rocket: {fileID: 948062250}
   _effect: {fileID: 314142997}
-  _reflectSound: {fileID: 0}
+  _rocketSound: {fileID: 8300000, guid: 994fa562658c1cd4bbae9c22c2c79334, type: 3}
   _audioSource: {fileID: 883554392}
 --- !u!1 &1013924060
 GameObject:

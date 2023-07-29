@@ -51,10 +51,10 @@ public class CameraController : MonoBehaviour
 
             _target = _targets[_nowPlayer];
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            
-        }
+    public void SetTarget()
+    {
+        _target = _targets[5];
     }
 }

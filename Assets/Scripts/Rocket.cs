@@ -14,7 +14,7 @@ public class Rocket : MonoBehaviour
     private GameObject _effect;
     //　ロケットの音
     [SerializeField]
-    private AudioClip _reflectSound;
+    private AudioClip _rocketSound;
     //　AudioSource
     [SerializeField]
     private AudioSource _audioSource;
@@ -35,6 +35,9 @@ public class Rocket : MonoBehaviour
         {
             //　球を格納（消去）
             Destroy(collision.gameObject);
+
+            _audioSource.clip = _rocketSound;
+            _audioSource.Play();
 
             _isLauch = true;
         }
